@@ -1,0 +1,153 @@
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+  --blue: hsl(246, 80%, 60%);
+  /* (work) */
+  --light-red-orange: hsl(15, 100%, 70%);
+  /* (play) */
+  --soft-blue: hsl(195, 74%, 62%);
+  /* (study) */
+  --light-red: hsl(348, 100%, 68%);
+  /* (exercise) */
+  --lime-green: hsl(145, 58%, 55%);
+  /* (social) */
+  --violet: hsl(264, 64%, 52%);
+  /* (self care) */
+  --soft-orange: hsl(43, 84%, 65%);
+
+  /* ### Neutral */
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+
+  /* font family */
+  --rubik-font: "Rubik", serif;
+
+  /* padding */
+  --rem-padding: 1.2rem;
+
+  /* border radius */
+  --rem-radius: 0.7rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--very-dark-blue);
+  font-family: var(--rubik-font);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+.left-part {
+  background-color: var(--dark-blue);
+  border-radius: var(--rem-radius);
+  display: grid;
+}
+
+.person {
+  background-color: var(--blue);
+  border-radius: var(--rem-radius);
+  padding: var(--rem-padding);
+  width: 11rem;
+}
+
+.person img {
+  width: 4rem;
+  height: auto;
+  border: 0.15rem solid white;
+  border-radius: 9999rem;
+  margin-bottom: 1rem;
+}
+
+.label {
+  color: var(--pale-blue);
+  font-size: 0.8rem;
+}
+
+.name {
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.item-times {
+  padding: var(--rem-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.times {
+  color: var(--desaturated-blue);
+  cursor: pointer;
+}
+
+.times:hover {
+  color: var(--pale-blue);
+}
+
+.right-part {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.hoby {
+  margin: 1rem;
+  border-radius: var(--rem-radius);
+  position: relative;
+  overflow: hidden;
+}
+
+.hoby-bg-img {
+  width: 3rem;
+  position: absolute;
+  right: 8px;
+  top: -6px;
+}
+
+.hoby:nth-child(1) {
+  background-color: var(--light-red-orange);
+}
+.hoby:nth-child(2) {
+  background-color: var(--soft-blue);
+}
+.hoby:nth-child(3) {
+  background-color: var(--light-red);
+}
+.hoby:nth-child(4) {
+  background-color: var(--lime-green);
+}
+.hoby:nth-child(5) {
+  background-color: var(--violet);
+}
+.hoby:nth-child(6) {
+  background-color: var(--soft-orange);
+}
+
+.card {
+  padding: var(--rem-padding);
+  background-color: var(--dark-blue);
+  margin-top: 1.5rem;
+  border-radius: var(--rem-radius);
+}

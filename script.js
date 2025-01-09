@@ -2,6 +2,7 @@ const times = document.querySelectorAll('.times');
 const hobyNames = document.querySelectorAll('.hoby-name');
 const periods = document.querySelectorAll('.period');
 const previouses = document.querySelectorAll('.previous');
+const regularls = ['day', 'month', 'year'];
 
 times[1].style.color = 'white';
 showDeails();
@@ -27,21 +28,15 @@ function showDeails(type = "week") {
         .catch(error => console.error('Error:', error));
 }
 
-// times[0].addEventListener('click', function () {
-//     resetColors();
-//     this.style.color = 'white';
-//     showDeails("day");
-// });
-// times[1].addEventListener('click', function () {
-//     resetColors();
-//     this.style.color = 'white';
-//     showDeails("week");
-// });
-// times[2].addEventListener('click', function () {
-//     resetColors();
-//     this.style.color = 'white';
-//     showDeails("month");
-// });
+
+// fetch data after clicking on the text field
+times.forEach((element , index) => {
+    element.addEventListener('click', function () {
+        resetColors();
+        this.style.color = 'white';
+        showDeails(regularls[index]);
+    });
+});
 
 // rest the colors of the side text buttons
 function resetColors() {

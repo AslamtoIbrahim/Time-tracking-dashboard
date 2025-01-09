@@ -169,6 +169,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2.5rem;
 }
 
 .head img {
@@ -178,7 +179,6 @@ main {
 
 .hoby-name {
   font-weight: 300;
-  margin-right: 4rem;
 }
 
 .period {

@@ -27,6 +27,7 @@
 
   /* padding */
   --rem-padding: 1.2rem;
+  --gap-grid: 1rem;
 
   /* border radius */
   --rem-radius: 0.7rem;
@@ -57,6 +58,7 @@ main {
 .content {
   display: grid;
   grid-template-columns: repeat(2, auto);
+  gap: var(--gap-grid);
 }
 
 .left-part {
@@ -110,10 +112,10 @@ main {
 .right-part {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-grid);
 }
 
 .hoby {
-  margin: 1rem;
   border-radius: var(--rem-radius);
   position: relative;
   overflow: hidden;
@@ -126,28 +128,66 @@ main {
   top: -6px;
 }
 
-.hoby:nth-child(1) {
+.top-bg {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+}
+.hoby:nth-child(1) .top-bg {
   background-color: var(--light-red-orange);
 }
-.hoby:nth-child(2) {
+.hoby:nth-child(2) .top-bg {
   background-color: var(--soft-blue);
 }
-.hoby:nth-child(3) {
+.hoby:nth-child(3) .top-bg {
   background-color: var(--light-red);
 }
-.hoby:nth-child(4) {
+.hoby:nth-child(4) .top-bg {
   background-color: var(--lime-green);
 }
-.hoby:nth-child(5) {
+.hoby:nth-child(5) .top-bg {
   background-color: var(--violet);
 }
-.hoby:nth-child(6) {
+.hoby:nth-child(6) .top-bg {
   background-color: var(--soft-orange);
 }
 
 .card {
   padding: var(--rem-padding);
   background-color: var(--dark-blue);
-  margin-top: 1.5rem;
+  margin-top: 1.8rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
   border-radius: var(--rem-radius);
+  justify-content: space-between;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head img {
+  cursor: pointer;
+  width: 15%;
+}
+
+.hoby-name {
+  font-weight: 300;
+  margin-right: 4rem;
+}
+
+.period {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.previous {
+  font-weight: 200;
+  color: var(--pale-blue);
+  font-size: 0.6rem;
 }
